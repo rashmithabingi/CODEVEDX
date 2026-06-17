@@ -1,156 +1,44 @@
-\# CODEVEDX Internship - Data Analysis With SQL
-
-
-
-\## Project 1 - Sales Data Analysis Using SQL
-
-\- Tool: MySQL Workbench 8.0
-
-\- Dataset: Flipkart Products Dataset
-
-\- Categories: Electronics, Clothing, Footwear, Computers, etc.
-
-\- Queries: Revenue Analysis, Top Products, Discount Analysis
-
-
-
-\## Intern: Rashmitha
-
-\## Organization: CodeVedX
-
-
-
-
-
-
-
-
-
-USE flipkart\_analysis;
-
-
-
-\-- Query 1: Revenue by Category
-
-SELECT category,
-
-&#x20;      COUNT(\*) AS total\_products,
-
-&#x20;      AVG(actual\_price) AS avg\_price,
-
-&#x20;      SUM(actual\_price) AS total\_revenue
-
-FROM sales
-
-GROUP BY category
-
-ORDER BY total\_revenue DESC;
-
-
-
-
-
-
-
-USE flipkart\_analysis;
-
-
-
-SELECT product\_name, category, rating, rating\_count
-
-FROM sales
-
-ORDER BY rating DESC, rating\_count DESC
-
-LIMIT 10;
-
-
-
-
-
-
-
-
-
-USE flipkart\_analysis;
-
-
-
-SELECT product\_name, category,
-
-&#x20;      actual\_price, discounted\_price,
-
-&#x20;      discount\_percentage
-
-FROM sales
-
-ORDER BY discount\_percentage DESC
-
-LIMIT 10;
-
-
-
-
-
-USE flipkart\_analysis;
-
-
-
-SELECT product\_name, category,
-
-&#x20;      rating\_count AS total\_reviews,
-
-&#x20;      rating
-
-FROM sales
-
-ORDER BY rating\_count DESC
-
-LIMIT 10;
-
-
-
-
-
-USE flipkart\_analysis;
-
-
-
-SELECT category,
-
-&#x20;      AVG(rating) AS avg\_rating,
-
-&#x20;      COUNT(\*) AS total\_products,
-
-&#x20;      SUM(rating\_count) AS total\_reviews
-
-FROM sales
-
-GROUP BY category
-
-ORDER BY avg\_rating DESC;
-
-
-
-
-
-USE flipkart\_analysis;
-
-
-
-SELECT category,
-
-&#x20;      AVG(actual\_price - discounted\_price) AS avg\_discount\_amount,
-
-&#x20;      AVG(discounted\_price) AS avg\_final\_price
-
-FROM sales
-
-GROUP BY category
-
-ORDER BY avg\_discount\_amount DESC;
-
-
-
-
-
+# CODEVEDX Internship - Data Analysis With SQL
+## Intern: Rashmitha
+## Organization: CodeVedX
+
+---
+
+## Project 1 - Sales Data Analysis Using SQL
+- Tool: MySQL Workbench 8.0
+- Database: flipkart_analysis
+- Dataset: Flipkart Products Dataset
+- Categories: Electronics, Clothing, Footwear, Computers, etc.
+
+### Queries Performed:
+- Q1: Revenue by Category (total products, avg price, total revenue)
+- Q2: Top 10 Products by Rating and Rating Count
+- Q3: Top 10 Products by Highest Discount Percentage
+- Q4: Most Reviewed Products (total reviews & rating)
+- Q5: Category wise Avg Rating, Total Products, Total Reviews
+- Q6: Category wise Avg Discount Amount and Avg Final Price
+
+---
+
+## Project 2 - HR Analytics Using SQL
+- Tool: MySQL Workbench 8.0
+- Database: hr_analytics
+- Dataset: TechNova Solutions (Fictional Company - 20 Employees)
+- Departments: Development, Testing, HR, Management, Sales
+- Job Roles: Software Engineer, Senior Engineer, Team Lead, Manager, QA Tester, HR Executive, Sales Executive
+
+### Tables Created:
+- employees - Employee details
+- salary - Basic, Bonus, Total Salary
+- performance - Rating, Projects, Training Hours
+- attrition - Left Company & Reason
+
+### Queries Performed:
+- Q1: Total employees per department
+- Q2: Average salary by department
+- Q3: Employees who left the company
+- Q4: Top performers (Rating 5)
+- Q5: Department with highest attrition
+- Q6: Average age by department
+- Q7: Highest paid employees (Top 5)
+- Q8: Gender distribution
