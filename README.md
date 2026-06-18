@@ -42,3 +42,33 @@
 - Q6: Average age by department
 - Q7: Highest paid employees (Top 5)
 - Q8: Gender distribution
+
+
+## Project 5 - E-Commerce Performance Analysis Using SQL
+
+- Tool: MySQL Workbench 8.0
+- Database: amazone_store
+- Dataset: AmaZone Global Store (Fictional - 25 Orders)
+- Categories: Electronics
+- Countries: USA, UK, Canada, Germany, Australia
+
+### Tables Created:
+- customers - Customer details & location
+- products - Electronics products with pricing
+- orders - Order tracking with status
+- delivery - Delivery performance records
+
+### KPIs Analyzed:
+- KPI 1: Total Revenue from Delivered Orders
+- KPI 2: Top Selling Products by Revenue
+- KPI 3: Cancellation Rate (%)
+- KPI 4: Average Order Value
+- KPI 5: Best Customers by Total Spending
+- KPI 6: Delivery Performance (On Time vs Delayed)
+- KPI 7: Monthly Sales Trend (Jan-Jun 2024)
+
+### Key Findings:
+- Highest Revenue Month: January 2024 ($3,699.96)
+- Total KPIs Analyzed: 7
+- Cancellation Rate: 16%
+- Best Delivery Rate: On Time
