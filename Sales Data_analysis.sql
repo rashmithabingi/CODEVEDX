@@ -1,6 +1,5 @@
 CREATE DATABASE flipkart_analysis;
 USE flipkart_analysis;
-USE flipkart_analysis;
 
 CREATE TABLE sales (
     product_id INT,
